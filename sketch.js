@@ -1,9 +1,21 @@
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(100);
+var vertices = [];
 
+function setup() {
+  createCanvas(640, 360);
+  
 }
 
-function draw() {
-  ellipse(mouseX, mouseY, 20, 20);
+function mousePressed() {
+  var v = createVector(mouseX, mouseY);
+    vertices.push(v);
+}
+
+function draw(){
+    background(51);
+    
+    for(var i =0; < i < Vertices.length; i ++){
+        fill(255);
+        stroke(255);
+        ellipse(vertices[i].x,vertices[i].y,16,16);
+    }
 }
